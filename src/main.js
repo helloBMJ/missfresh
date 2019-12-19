@@ -22,6 +22,11 @@ Vue.prototype.$http = axios
 import { Lazyload } from 'mint-ui';
 Vue.use(Lazyload);
 
+
+import { Loadmore } from 'mint-ui';
+
+Vue.component("mt-loadmore", Loadmore);
+
 //引入InfiniteScroll（无限滚动）
 import { InfiniteScroll } from 'mint-ui';
 
