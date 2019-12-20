@@ -1,7 +1,7 @@
 <template>
   <div class="item">
         <span v-if="flag"><slot name="activeImg"></slot></span>
-        <span v-else="" @click="clickme"><slot name="normalImg"></slot></span>
+        <span v-else @click="clickme"><slot name="normalImg"></slot></span>
         <span :class="{active:flag}">{{txt}}</span>
   </div>
 </template>

@@ -7,7 +7,6 @@ import store from './store'
 //引入main.scss文件
 import "./stylesheets/main.scss"
 //引入rem.js文件
-
 import "./models/rem"
 
 //引入swiper.min.css文件
