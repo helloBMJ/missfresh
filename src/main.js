@@ -7,7 +7,6 @@ import store from './store'
 //引入main.scss文件
 import "./stylesheets/main.scss"
 //引入rem.js文件
-
 import "./models/rem"
 
 //引入swiper.min.css文件
@@ -21,6 +20,11 @@ Vue.prototype.$http = axios
 //引入lazy-load(图片懒加载)
 import { Lazyload } from 'mint-ui';
 Vue.use(Lazyload);
+
+
+import { Loadmore } from 'mint-ui';
+
+Vue.component("mt-loadmore", Loadmore);
 
 //引入InfiniteScroll（无限滚动）
 import { InfiniteScroll } from 'mint-ui';
