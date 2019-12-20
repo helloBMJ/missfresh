@@ -7,9 +7,13 @@
   
   export default {
       components: {
+      },
+      created(){
+          this.$store.dispatch("initCars")
       }
   }
 </script>
 <style lang="scss">
 
 </style>
+ 

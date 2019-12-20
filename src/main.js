@@ -23,7 +23,14 @@ import { Lazyload } from 'mint-ui';
 Vue.use(Lazyload);
 
 //引入InfiniteScroll（无限滚动）
-import { InfiniteScroll } from 'mint-ui';
+import { InfiniteScroll, Tabbar, TabItem,Cell,Button} from 'mint-ui';
+
+Vue.component("mt-tabbar", Tabbar);
+Vue.component("mt-tab-item", TabItem);
+Vue.component("mt-button", Button);
+Vue.component("mt-cell", Cell);
+
+
 
 Vue.config.productionTip = false
 
