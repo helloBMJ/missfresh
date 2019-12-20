@@ -19,8 +19,10 @@ export default {
     },
     methods: {
         clickme(){
-            // this.$emit("changeSelected", this.mark)
             this.$router.push("/" + this.mark)
+            this.$emit("changeSelected", this.mark)
+            // this.changeSelected(this.mark);
+
         }
     }
 }

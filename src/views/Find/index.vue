@@ -1,8 +1,9 @@
 <template>
   <div class="find">
-      <Tabbar></Tabbar>
+      
       <Toptab></Toptab>
       <router-view></router-view>
+      <Tabbar></Tabbar>
   </div>
 </template>
 
