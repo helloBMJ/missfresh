@@ -8,12 +8,13 @@ import classify from "./classify"
 import find from "./find"
 import mine from "./mine"
 import shoppingcart from "./shoppingcart"
+import login from "./login"
 
 
 const router = new VueRouter({
   routes: [
     {path: "/", redirect: "/home"},
-    home,classify,find,mine,shoppingcart,
+    home,classify,find,mine,shoppingcart,login,
     {path: "/404", component: ()=>import("@/views/Notfound")},
     {path: "*", redirect: "/404"}
   ]
