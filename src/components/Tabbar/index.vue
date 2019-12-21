@@ -23,6 +23,7 @@ export default {
         }
     },
     data(){
+        // console.log("aaaa",this.$route.path);
         return {
             selected: this.$route.name,
             navs: [

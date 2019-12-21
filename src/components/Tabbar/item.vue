@@ -1,6 +1,6 @@
 <template>
   <div class="item">
-        <span v-if="flag"><slot name="activeImg"></slot></span>
+        <span v-if="flag" ><slot name="activeImg"></slot></span>
         <span v-else @click="clickme"><slot name="normalImg"></slot></span>
         <span :class="{active:flag}">{{txt}}</span>
   </div>
@@ -11,6 +11,7 @@ export default {
     props: ["txt", "mark", "selected"],
     computed:  {
         flag(){
+            console.log(this.mark,this.selected);
             if(this.mark === this.selected){
                 return true
             }
