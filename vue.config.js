@@ -33,17 +33,11 @@ module.exports = {
         https: false,
         hotOnly: false,
         // 设置代理，可以解决跨域问题
-<<<<<<< HEAD
-        proxy: { //http://139.129.116.44:8088/sk/navs
-            "/api":{
-                target:"http://139.129.116.44:8088",
-                changeOrigin: true,
-=======
+
         proxy: {
             "api":{
                 target:"http://139.129.116.44:8088",
                 changeOrigin:true,
->>>>>>> refs/remotes/origin/master
                 pathRewrite:{
                     "^/api":""
                 }
@@ -54,7 +48,6 @@ module.exports = {
     // 第三方插件配置
     pluginOptions: {
         // ...
-<<<<<<< HEAD
     },
     // proxyTable: { 
     //     '/api': {  //使用"/api"来代替"http://f.apiplus.c" 
@@ -65,7 +58,6 @@ module.exports = {
     //         } 
     //     } 
     //   }
-=======
-    }
->>>>>>> refs/remotes/origin/master
+
+    
 }

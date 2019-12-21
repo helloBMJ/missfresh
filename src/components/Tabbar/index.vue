@@ -6,6 +6,7 @@
             :selected="selected"
             v-for="nav in navs"
             :key="nav.id"
+            @changeSelected="changeSelected"
         >
             <img slot="activeImg" :src="nav.activeImg" alt="">
             <img slot="normalImg" :src="nav.normalImg" alt="">
@@ -22,6 +23,7 @@ export default {
         }
     },
     data(){
+        // console.log("aaaa",this.$route.path);
         return {
             selected: this.$route.name,
             navs: [
@@ -32,6 +34,7 @@ export default {
                 {id:5, txt: "我的", mark: "mine", activeImg: require("../../assets/mis_img_20181012183118867.png"), normalImg: require("../../assets/mis_img_20181012183115125.png")},
             ]
         }
+        console.log(this.$route.name)
     },
     components: {
         item,
