@@ -1,5 +1,6 @@
 <template>
 	<div class="classify">
+		
 		<top></top>
 		<left></left>
 		<div class="top">
@@ -18,10 +19,12 @@
 			</div>
 		</div>
 		<Tabbar></Tabbar>
+		<vip></vip>
 	</div>
 </template>
 <script>
 import hot from "./hot"
+import vip from "./vip"
 import left from "./left"
 import top from "@/components/Head"
 import Tabbar from "@/components/Tabbar"
@@ -47,11 +50,11 @@ export default {
 		}
 	},
   components: {
-    Tabbar,hot,top,left
+    Tabbar,hot,top,left,vip
   },
   created(){
   	this.$http.get("/api/list.json").then((res)=>{
-		console.log(res.data)
+		// console.log(res.data)
 		this.list = res.data
 	})
   }
