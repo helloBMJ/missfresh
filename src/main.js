@@ -10,6 +10,9 @@ import "./stylesheets/main.scss"
 
 import "./models/rem"
 
+// import ViewUI from 'view-design';
+// Vue.use(ViewUI);
+
 //引入swiper.min.css文件
 import "swiper/css/swiper.min.css"
 
@@ -19,13 +22,22 @@ import axios from "axios"
 Vue.prototype.$http = axios
 
 //引入lazy-load(图片懒加载)
-import { Lazyload } from 'mint-ui';
+import { Lazyload,Cell} from 'mint-ui';
+import { Tabbar, TabItem } from 'mint-ui';
+
+Vue.component('mt-tabbar', Tabbar);
+Vue.component('mt-tab-item', TabItem);
 Vue.use(Lazyload);
+Vue.component("mt-cell", Cell);
 
 //引入InfiniteScroll（无限滚动）
 import { InfiniteScroll } from 'mint-ui';
 
 Vue.config.productionTip = false
+
+// import { Menu } from 'view-design';
+// Vue.component('Menu', Menu);
+
 
 
 

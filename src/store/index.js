@@ -3,13 +3,7 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
+import fruitList from "./FruitList"
 export default new Vuex.Store({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
+  fruitList
 })
