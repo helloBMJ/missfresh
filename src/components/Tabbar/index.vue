@@ -6,6 +6,7 @@
             :selected="selected"
             v-for="nav in navs"
             :key="nav.id"
+            @changeSelected="changeSelected"
         >
             <img slot="activeImg" :src="nav.activeImg" alt="">
             <img slot="normalImg" :src="nav.normalImg" alt="">

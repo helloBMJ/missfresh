@@ -7,6 +7,9 @@
   
   export default {
       components: {
+      },
+      created(){
+          this.$store.dispatch("initCars")
       }
   }
 </script>
@@ -16,3 +19,4 @@
   //   flex: 1;
   // }
 </style>
+ 
