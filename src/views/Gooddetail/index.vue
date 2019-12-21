@@ -40,7 +40,7 @@ export default {
     }
   },
   created() {
-    console.log(this.$route.params.id)
+    // console.log(this.$route.params.id)
     let goodId = this.$route.params.id
     this.$http.get(`/api/sk/navs/`).then(res=>{
       let list = res.data.data.object_list
@@ -48,7 +48,7 @@ export default {
         return currentvalue.CommodityId === goodId
       })
       this.good = good[0]
-      console.log(this.good)
+      // console.log(this.good)
       
     })
   },
@@ -57,7 +57,7 @@ export default {
 
 <style lang="scss" scoped>
 .gooddetail{
-  height: 1000px;
+  height: 800px;
 }
   .top{
     position: fixed;

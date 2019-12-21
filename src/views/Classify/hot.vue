@@ -39,7 +39,7 @@ import goodItem from "./item"
 			}).then(res=>{
 				// console.log(res.data.data.object_list)
 				this.navs = res.data.data.object_list
-				console.log(this.navs)
+				// console.log(this.navs)
 			})
 		},
 	}

@@ -3,7 +3,6 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
-Vue.use("vuex")
 //引入main.scss文件
 import "./stylesheets/main.scss"
 //引入rem.js文件
