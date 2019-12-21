@@ -11,7 +11,7 @@ export default {
     props: ["txt", "mark", "selected"],
     computed:  {
         flag(){
-            console.log(this.mark,this.selected);
+            // console.log(this.mark,this.selected);
             if(this.mark === this.selected){
                 return true
             }
