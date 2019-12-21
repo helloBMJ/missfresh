@@ -18,11 +18,14 @@
   #head{
     width: 100%;
     height: 60px;
+    background: white;
     position: fixed;
     top: 0;
     z-index: 1;
+
+
     width:3.75rem;
-    background:url(../../assets/home/icon.png) white no-repeat 0.16rem center;
+    // background:url(../../assets/home/icon.png) no-repeat 0.16rem center;
     background-size: 0.55rem 0.14rem;
   }
   .search{

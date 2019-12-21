@@ -25,29 +25,33 @@ module.exports = {
     // use thread-loader for babel & TS in production build
     // enabled by default if the machine has more than 1 cores
     parallel: require('os').cpus().length > 1,
-    // webpack-dev-server 开发环境 相关配置
+    // webpack-dev-server 相关配置
     devServer: {
         open: true,
         host: 'localhost',
-        port: 9000,
+        port: 8088,
         https: false,
         hotOnly: false,
+<<<<<<< HEAD
         // 设置代理，可以解决跨域问题
 
+=======
+>>>>>>> refs/remotes/origin/master
         proxy: {
-            "api":{
+            "/api":{
                 target:"http://139.129.116.44:8088",
                 changeOrigin:true,
                 pathRewrite:{
                     "^/api":""
                 }
             }
-        }, 
+        }, // 设置代理
         before: app => { }
     },
     // 第三方插件配置
     pluginOptions: {
         // ...
+<<<<<<< HEAD
     },
     // proxyTable: { 
     //     '/api': {  //使用"/api"来代替"http://f.apiplus.c" 
@@ -60,4 +64,7 @@ module.exports = {
     //   }
 
     
+=======
+    }
+>>>>>>> refs/remotes/origin/master
 }

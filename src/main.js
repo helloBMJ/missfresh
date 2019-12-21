@@ -3,11 +3,13 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
-
 //引入main.scss文件
 import "./stylesheets/main.scss"
 //引入rem.js文件
 import "./models/rem"
+
+// import ViewUI from 'view-design';
+// Vue.use(ViewUI);
 
 //引入swiper.min.css文件
 import "swiper/css/swiper.min.css"
@@ -18,8 +20,10 @@ import axios from "axios"
 Vue.prototype.$http = axios
 
 //引入lazy-load(图片懒加载)
-import { Lazyload } from 'mint-ui';
+import { Lazyload} from 'mint-ui';
+
 Vue.use(Lazyload);
+
 
 
 import { Loadmore } from 'mint-ui';
@@ -37,6 +41,10 @@ Vue.component("mt-cell", Cell);
 
 
 Vue.config.productionTip = false
+
+// import { Menu } from 'view-design';
+// Vue.component('Menu', Menu);
+
 
 
 
