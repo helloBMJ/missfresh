@@ -4,6 +4,9 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 import fruitList from "./FruitList"
+import mycar from "./myCar"
 export default new Vuex.Store({
-  fruitList
+  modules:{
+    fruitList,mycar
+  }
 })

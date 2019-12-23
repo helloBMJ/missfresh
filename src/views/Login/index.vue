@@ -2,11 +2,11 @@
     <div class="loginbox">
         <div class="verify-phone">
             <div class="loginbox-form">
-                <input type="text" placeholder="请输入手机号">
+                <input type="number" placeholder="请输入手机号" name="phone" v-model="phone" :disabled="disabled" @blur="sendcode" >
                 <input type="text" placeholder="输入验证码">
-                <div class="btn-code"><button>语音验证码</button></div>
+                <div class="btn-code"><button class="btncode" name="codetxt" @click="code">语音验证码</button></div>
                 <div class="agree-box">
-                    <input type="checkbox" :checked="isChecked" @click="handleDisabled">
+                    <input type="checkbox">
                     <div class="form-protocol-label clear">
                         <i>我已认真阅读、理解并同意</i>
                         <i class="form-protocol-link">《每日优鲜用户协议》</i>
@@ -15,7 +15,7 @@
                     </div>
                 </div>
                 <div class="agree-btn">
-                    <button :disabled="isDisabled">登录</button>
+                    <button>登录</button>
                 </div>
                 <h2 class="login-tip">为方便您及时查询订单信息，需要验证您的手机号来登录</h2>
             </div>
@@ -27,18 +27,23 @@
     export default {
         data(){
             return{
-                isChecked: false,
-                isDisabled:false
+                disabled:false,
+                phone: this.phone
             }
         },
         methods: {
-            handleDisabled(){
-                this.isChecked = !this.isChecked;
-                if(this.isChecked == true){
-                    this.isDisabled = true;
+            sendcode(){
+                var reg=11 && /^((13|14|15|17|18)[0-9]{1}\d{8})$/;
+                if(this.phone == ""){
+                    alert("请输入手机号码")
+                }else if(!reg.test(this.phone)){
+                    alert("手机号码错误")
                 }else{
-                    this.isDisabled = false
+                    this.disabled = true
                 }
+            },
+            code(){
+                alert("网络错误")
             }
         }
     }

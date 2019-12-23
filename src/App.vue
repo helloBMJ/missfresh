@@ -10,6 +10,7 @@
       },
       created(){
           this.$store.dispatch("initCars")
+          console.log(this.$store.dispatch) 
       }
   }
 </script>

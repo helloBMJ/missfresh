@@ -27,16 +27,11 @@ module.exports = {
     parallel: require('os').cpus().length > 1,
     // webpack-dev-server 相关配置
     devServer: {
-        open: true,
+        open: false,
         host: 'localhost',
         port: 8088,
         https: false,
         hotOnly: false,
-<<<<<<< HEAD
-        // 设置代理，可以解决跨域问题
-
-=======
->>>>>>> refs/remotes/origin/master
         proxy: {
             "/api":{
                 target:"http://139.129.116.44:8088",
@@ -51,20 +46,5 @@ module.exports = {
     // 第三方插件配置
     pluginOptions: {
         // ...
-<<<<<<< HEAD
-    },
-    // proxyTable: { 
-    //     '/api': {  //使用"/api"来代替"http://f.apiplus.c" 
-    //       target: 'http://139.129.116.44:8088/sk/navs', //源地址 
-    //       changeOrigin: true, //改变源 
-    //       pathRewrite: { 
-    //         '^/api': 'http://139.129.116.44:8088/sk/navs' //路径重写 
-    //         } 
-    //     } 
-    //   }
-
-    
-=======
     }
->>>>>>> refs/remotes/origin/master
 }

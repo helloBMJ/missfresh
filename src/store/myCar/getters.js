@@ -7,6 +7,7 @@ export default {
             total.price += item.OriginalPrice*item.num
             total.num += item.num
         })
+        total.price = total.price.toFixed(2)
         return total
     }
 }

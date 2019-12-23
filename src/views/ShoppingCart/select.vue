@@ -11,7 +11,7 @@
         :title="good.CommodityName"
         :label="good.SubTitle"
         >
-            <div><mt-button @click="addGoodInCar(good)" id="btn" type="danger" size="small">+</mt-button>
+            <div class="good-box"><mt-button @click="addGoodInCar(good)" id="btn" type="danger" size="small">+</mt-button>
                 <span>{{good.__v}}</span>
             </div>
             <img slot="icon" v-lazy="good.SmallPic" width="150" height="150">
@@ -66,6 +66,11 @@ export default {
         //     // letter-spacing:10px;
         // }
     }
+    .good-box{
+        .mint-cell-text{
+            margin-top: 10px;
+        }
+    }
     .mint-cell{
         width: 100%;
         display: inline-block;
@@ -73,6 +78,9 @@ export default {
         img{
             float:left;
         }
+    }
+    .mint-tabbar{
+        margin-bottom: -5px;
     }
     #btn{
         width:25px;

@@ -31,7 +31,7 @@
         </div>
         <div id = "aggregate">
             <p>总数目为:{{computeTotal.num}}</p>
-            <p>总价为:{{computeTotal.price}}</p>
+            <p class="price-txt">总价为:{{computeTotal.price}}</p>
         </div>
 
     </div>
@@ -42,7 +42,7 @@ import {mapActions,mapState,mapGetters} from  "vuex"
 export default {
     computed:{
         ...mapState({
-            goods:state=>state.myCar.cars
+            goods:state=>state.mycar.cars
         }),
         ...mapGetters(["computeTotal"])
     },
@@ -59,20 +59,21 @@ export default {
     #aggregate{
             font-size:16px;
             font-weight:900;
-            width:90px;
+            width:120px;
             height:40px;
-            background:pink;
-            color:red;
+            background:#d9d9d9;
+            color:#000;
+            .price-txt{
+                color: #ff4891;
+            }
         }
-    .car{
-        padding-bottom:100px;
-    }
     .big{
         margin-bottom:20px;
         border-top:5px solid black;
        
     }
     .car{
+        padding-bottom:100px;
         .top{
             width:100%;
             height:40px;

@@ -67,6 +67,7 @@ export default {
 
 <style lang="scss">
 .home{
+  margin-top:0.5rem;
   margin-bottom:1.2rem;
 }
   .recommond-box{
